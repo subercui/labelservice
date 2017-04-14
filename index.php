@@ -333,36 +333,36 @@
 											<li id="Qualify">2.4.1.3 雇主是否有资质</li>
 											<label><input name="Qualify" type="radio" value="1" onclick="changeColor('Qualify')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="Qualify" type="radio" value="0" onclick="changeColor('Qualify')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="Qualify" type="radio" value="2" onclick="changeColor('Qualify')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="Qualify" type="radio" value="3" onclick="changeColor('Qualify')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="Qualify" type="radio" value="2" onclick="changeColor('Qualify')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="Qualify" type="radio" value="3" onclick="changeColor('Qualify')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 											<li id="EndLabor">2.4.1.4 是否（要）解除或终止劳动关系</li>
 											<label><input name="EndLabor" type="radio" value="1" onclick="changeColor('EndLabor')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="EndLabor" type="radio" value="0" onclick="changeColor('EndLabor')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="EndLabor" type="radio" value="2" onclick="changeColor('EndLabor')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="EndLabor" type="radio" value="3" onclick="changeColor('EndLabor')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="EndLabor" type="radio" value="2" onclick="changeColor('EndLabor')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="EndLabor" type="radio" value="3" onclick="changeColor('EndLabor')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 										</ul>
 									</li>
 									<li>2.4.2 劳动合同
 										<ul>
-											<li id="LaborContr">2.4.2.1 工伤发生时是否有劳动合同</li>
+											<li id="LaborContr">2.4.2.1 工伤发生时是否签订劳动合同</li>
 											<label><input name="LaborContr" type="radio" value="1" onclick="changeColor('LaborContr')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="LaborContr" type="radio" value="0" onclick="changeColor('LaborContr')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="LaborContr" type="radio" value="2" onclick="changeColor('LaborContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="LaborContr" type="radio" value="3" onclick="changeColor('LaborContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="LaborContr" type="radio" value="2" onclick="changeColor('LaborContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="LaborContr" type="radio" value="3" onclick="changeColor('LaborContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 											<li id="HaveContr">2.4.2.2 是否有劳动合同在手上</li>
 											<label><input name="HaveContr" type="radio" value="1" onclick="changeColor('HaveContr')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="HaveContr" type="radio" value="0" onclick="changeColor('HaveContr')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="HaveContr" type="radio" value="2" onclick="changeColor('HaveContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="HaveContr" type="radio" value="3" onclick="changeColor('HaveContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="HaveContr" type="radio" value="2" onclick="changeColor('HaveContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="HaveContr" type="radio" value="3" onclick="changeColor('HaveContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 											<li id="ValidContr">2.4.2.3 劳动合同是否有效</li>
 											<label><input name="ValidContr" type="radio" value="1" onclick="changeColor('ValidContr')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="ValidContr" type="radio" value="0" onclick="changeColor('ValidContr')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="ValidContr" type="radio" value="2" onclick="changeColor('ValidContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="ValidContr" type="radio" value="3" onclick="changeColor('ValidContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="ValidContr" type="radio" value="2" onclick="changeColor('ValidContr')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="ValidContr" type="radio" value="3" onclick="changeColor('ValidContr')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 										</ul>
 									</li>
@@ -373,12 +373,10 @@
 									<li id="ConfrmLevel">2.5.1 是否已由权威机构定级</li>
 									<label><input name="ConfrmLevel" type="radio" value="1" onclick="changeColor('ConfrmLevel')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="ConfrmLevel" type="radio" value="0" onclick="changeColor('ConfrmLevel')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="ConfrmLevel" type="radio" value="2" onclick="changeColor('ConfrmLevel')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="ConfrmLevel" type="radio" value="3" onclick="changeColor('ConfrmLevel')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="ConfrmLevel" type="radio" value="2" onclick="changeColor('ConfrmLevel')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="ConfrmLevel" type="radio" value="3" onclick="changeColor('ConfrmLevel')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li>2.5.2 其他 (待补充)</li>
-									<br>
-									<li id="Level">2.5.3 分级（0：11，0为死亡，11为不够伤残）</li>
+									<li id="Level">2.5.2 分级（1：10）</li>
 									<input type="text" class="form-control" name="Level">
 								</ul>
 							</li>
