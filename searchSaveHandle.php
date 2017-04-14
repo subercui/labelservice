@@ -43,7 +43,6 @@
 	$RefuAsct=$_REQUEST['RefuAsct'];
 	$LaborDisp=$_REQUEST['LaborDisp'];
 	$Employ=$_REQUEST['Employ'];
-	$ExistEmp=$_REQUEST['ExistEmp'];
 	$Qualify=$_REQUEST['Qualify'];
 	$EndLabor=$_REQUEST['EndLabor'];
 	$LaborContr=$_REQUEST['LaborContr'];
@@ -66,16 +65,16 @@
 	if($FileBelong==0 || $FileBelong==2){
 		$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,DisptRes,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
 							OutForPub,OnOff,PrpOnOff,WorkDeath,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
-							LaborArbi,RefuAsct,LaborDisp,Employ,ExistEmp,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Insurance,PersonalWage,SocialWage,
+							LaborArbi,RefuAsct,LaborDisp,Employ,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Insurance,PersonalWage,SocialWage,
 							HaveMedicalFee,MedicalFee,BearMedicalFee,Identity) 
 							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$DisptRes','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
 							'$OutForPub','$OnOff','$PrpOnOff','$WorkDeath','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
-							'$LaborArbi','$RefuAsct','$LaborDisp','$Employ','$ExistEmp','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Insurance','$PersonalWage','$SocialWage',
+							'$LaborArbi','$RefuAsct','$LaborDisp','$Employ','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Insurance','$PersonalWage','$SocialWage',
 							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$Identity')";
 	}else if($FileBelong==1 || $FileBelong==3){
 		$sql="update feature set CaseID='$CaseID',Problem='$Problem',Anwser='$Anwser',GetPay='$GetPay',AssoPay='$AssoPay',InjuryDegree='$InjuryDegree',InjRange='$InjRange',BearPay='$BearPay',PayMeth='$PayMeth',DisptRes='$DisptRes',AppPay='$AppPay',CondUnre='$CondUnre',WorkTime='$WorkTime',WorkPlace='$WorkPlace',JobRel='$JobRel',DiseRel='$DiseRel',
 							OutForPub='$OutForPub',OnOff='$OnOff',PrpOnOff='$PrpOnOff',WorkDeath='$WorkDeath',Rescue='$Rescue',Service='$Service',Crime='$Crime',Drink='$Drink',Suicide='$Suicide',InjIden='$InjIden',Valid='$Valid',InjDate='$InjDate',Year='$Year',Month='$Month',Day='$Day',AdmitInj='$AdmitInj',WillPay='$WillPay',AmountDispute='$AmountDispute',RangeDispute='$RangeDispute',SettlePrivate='$SettlePrivate',SickDispute='$SickDispute',
-							LaborArbi='$LaborArbi',RefuAsct='$RefuAsct',LaborDisp='$LaborDisp',Employ='$Employ',ExistEmp='$ExistEmp',Qualify='$Qualify',EndLabor='$EndLabor',LaborContr='$LaborContr',HaveContr='$HaveContr',ValidContr='$ValidContr',ConfrmLevel='$ConfrmLevel',Level='$Level',Insurance='$Insurance',PersonalWage='$PersonalWage',SocialWage='$SocialWage',
+							LaborArbi='$LaborArbi',RefuAsct='$RefuAsct',LaborDisp='$LaborDisp',Employ='$Employ',Qualify='$Qualify',EndLabor='$EndLabor',LaborContr='$LaborContr',HaveContr='$HaveContr',ValidContr='$ValidContr',ConfrmLevel='$ConfrmLevel',Level='$Level',Insurance='$Insurance',PersonalWage='$PersonalWage',SocialWage='$SocialWage',
 							HaveMedicalFee='$HaveMedicalFee',MedicalFee='$MedicalFee',BearMedicalFee='$BearMedicalFee',Identity='$Identity' where CaseID='$CaseID' and username='$username'";
 	}
 

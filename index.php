@@ -330,19 +330,13 @@
 											<!-- <label><input name="Employ" type="radio" value="2" onclick="changeColor('Employ')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
 											<!-- <label><input name="Employ" type="radio" value="3" onclick="changeColor('Employ')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
-											<li id="ExistEmp">2.4.1.3 是否存在雇佣关系</li>
-											<label><input name="ExistEmp" type="radio" value="1" onclick="changeColor('ExistEmp')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-											<label><input name="ExistEmp" type="radio" value="0" onclick="changeColor('ExistEmp')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="ExistEmp" type="radio" value="2" onclick="changeColor('ExistEmp')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="ExistEmp" type="radio" value="3" onclick="changeColor('ExistEmp')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
-											<br>
-											<li id="Qualify">2.4.1.4 雇主是否有资质</li>
+											<li id="Qualify">2.4.1.3 雇主是否有资质</li>
 											<label><input name="Qualify" type="radio" value="1" onclick="changeColor('Qualify')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="Qualify" type="radio" value="0" onclick="changeColor('Qualify')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 											<label><input name="Qualify" type="radio" value="2" onclick="changeColor('Qualify')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
 											<label><input name="Qualify" type="radio" value="3" onclick="changeColor('Qualify')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
 											<br>
-											<li id="EndLabor">2.4.1.5 是否终止劳动关系</li>
+											<li id="EndLabor">2.4.1.4 是否（要）解除或终止劳动关系</li>
 											<label><input name="EndLabor" type="radio" value="1" onclick="changeColor('EndLabor')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="EndLabor" type="radio" value="0" onclick="changeColor('EndLabor')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 											<label><input name="EndLabor" type="radio" value="2" onclick="changeColor('EndLabor')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
@@ -454,7 +448,7 @@
 	var filename;
 	var curPage;
 	var FileBelong;
-    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","ExistEmp","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
+    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -711,7 +705,6 @@
 		RefuAsct=$("input[name='RefuAsct']:checked").val()==null?-1:$("input[name='RefuAsct']:checked").val();
 		LaborDisp=$("input[name='LaborDisp']:checked").val()==null?-1:$("input[name='LaborDisp']:checked").val();
 		Employ=$("input[name='Employ']:checked").val()==null?-1:$("input[name='Employ']:checked").val();
-		ExistEmp=$("input[name='ExistEmp']:checked").val()==null?-1:$("input[name='ExistEmp']:checked").val();
 		Qualify=$("input[name='Qualify']:checked").val()==null?-1:$("input[name='Qualify']:checked").val();
 		EndLabor=$("input[name='EndLabor']:checked").val()==null?-1:$("input[name='EndLabor']:checked").val();
 		LaborContr=$("input[name='LaborContr']:checked").val()==null?-1:$("input[name='LaborContr']:checked").val();
@@ -745,7 +738,7 @@
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
-							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
+							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){		
 			data=JSON.parse(msg);
@@ -931,7 +924,6 @@
 		RefuAsct=$("input[name='RefuAsct']:checked").val()==null?-1:$("input[name='RefuAsct']:checked").val();
 		LaborDisp=$("input[name='LaborDisp']:checked").val()==null?-1:$("input[name='LaborDisp']:checked").val();
 		Employ=$("input[name='Employ']:checked").val()==null?-1:$("input[name='Employ']:checked").val();
-		ExistEmp=$("input[name='ExistEmp']:checked").val()==null?-1:$("input[name='ExistEmp']:checked").val();
 		Qualify=$("input[name='Qualify']:checked").val()==null?-1:$("input[name='Qualify']:checked").val();
 		EndLabor=$("input[name='EndLabor']:checked").val()==null?-1:$("input[name='EndLabor']:checked").val();
 		LaborContr=$("input[name='LaborContr']:checked").val()==null?-1:$("input[name='LaborContr']:checked").val();
@@ -965,7 +957,7 @@
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
-							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
+							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
 			if(msg=='0'){
@@ -1074,7 +1066,6 @@
 		RefuAsct=$("input[name='RefuAsct']:checked").val()==null?-1:$("input[name='RefuAsct']:checked").val();
 		LaborDisp=$("input[name='LaborDisp']:checked").val()==null?-1:$("input[name='LaborDisp']:checked").val();
 		Employ=$("input[name='Employ']:checked").val()==null?-1:$("input[name='Employ']:checked").val();
-		ExistEmp=$("input[name='ExistEmp']:checked").val()==null?-1:$("input[name='ExistEmp']:checked").val();
 		Qualify=$("input[name='Qualify']:checked").val()==null?-1:$("input[name='Qualify']:checked").val();
 		EndLabor=$("input[name='EndLabor']:checked").val()==null?-1:$("input[name='EndLabor']:checked").val();
 		LaborContr=$("input[name='LaborContr']:checked").val()==null?-1:$("input[name='LaborContr']:checked").val();
@@ -1109,7 +1100,7 @@
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
-							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
+							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
 			if(msg==1){
