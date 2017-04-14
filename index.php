@@ -203,6 +203,12 @@
 									<!-- <label><input name="PrpOnOff" type="radio" value="2" onclick="changeColor('PrpOnOff')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
 									<!-- <label><input name="PrpOnOff" type="radio" value="3" onclick="changeColor('PrpOnOff')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
+									<li id="WorkDeath">2.1.8是否工作期间突发疾病48小时内死亡</li>
+									<label><input name="WorkDeath" type="radio" value="1" onclick="changeColor('WorkDeath')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="WorkDeath" type="radio" value="0" onclick="changeColor('WorkDeath')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<!-- <label><input name="WorkDeath" type="radio" value="2" onclick="changeColor('WorkDeath')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="WorkDeath" type="radio" value="3" onclick="changeColor('WorkDeath')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
+									<br>
 									<li id="Rescue">2.1.7 是否因抢险救灾受伤</li>
 									<label><input name="Rescue" type="radio" value="1" onclick="changeColor('Rescue')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Rescue" type="radio" value="0" onclick="changeColor('Rescue')"/>NO&nbsp;&nbsp;&nbsp;</label> 
@@ -442,7 +448,7 @@
 	var filename;
 	var curPage;
 	var FileBelong;
-    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","LaborDisp","Employ","ExistEmp","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
+    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","LaborDisp","Employ","ExistEmp","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -677,6 +683,7 @@
 		OutForPub=$("input[name='OutForPub']:checked").val()==null?-1:$("input[name='OutForPub']:checked").val();
 		OnOff=$("input[name='OnOff']:checked").val()==null?-1:$("input[name='OnOff']:checked").val();
 		PrpOnOff=$("input[name='PrpOnOff']:checked").val()==null?-1:$("input[name='PrpOnOff']:checked").val();
+		WorkDeath=$("input[name='WorkDeath']:checked").val()==null?-1:$("input[name='WorkDeath']:checked").val();
 		Rescue=$("input[name='Rescue']:checked").val()==null?-1:$("input[name='Rescue']:checked").val();
 		Service=$("input[name='Service']:checked").val()==null?-1:$("input[name='Service']:checked").val();
 		Crime=$("input[name='Crime']:checked").val()==null?-1:$("input[name='Crime']:checked").val();
@@ -729,7 +736,7 @@
 		
 		$.post("SaveHandle.php",{path_prefix:path_prefix,filename:filename,flag:flag,username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
-							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
+							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
@@ -895,6 +902,7 @@
 		OutForPub=$("input[name='OutForPub']:checked").val()==null?-1:$("input[name='OutForPub']:checked").val();
 		OnOff=$("input[name='OnOff']:checked").val()==null?-1:$("input[name='OnOff']:checked").val();
 		PrpOnOff=$("input[name='PrpOnOff']:checked").val()==null?-1:$("input[name='PrpOnOff']:checked").val();
+		WorkDeath=$("input[name='WorkDeath']:checked").val()==null?-1:$("input[name='WorkDeath']:checked").val();
 		Rescue=$("input[name='Rescue']:checked").val()==null?-1:$("input[name='Rescue']:checked").val();
 		Service=$("input[name='Service']:checked").val()==null?-1:$("input[name='Service']:checked").val();
 		Crime=$("input[name='Crime']:checked").val()==null?-1:$("input[name='Crime']:checked").val();
@@ -947,7 +955,7 @@
 		
 		$.post("UpdateHandle.php",{username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
-							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
+							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
@@ -1036,6 +1044,7 @@
 		OutForPub=$("input[name='OutForPub']:checked").val()==null?-1:$("input[name='OutForPub']:checked").val();
 		OnOff=$("input[name='OnOff']:checked").val()==null?-1:$("input[name='OnOff']:checked").val();
 		PrpOnOff=$("input[name='PrpOnOff']:checked").val()==null?-1:$("input[name='PrpOnOff']:checked").val();
+		WorkDeath=$("input[name='WorkDeath']:checked").val()==null?-1:$("input[name='WorkDeath']:checked").val();
 		Rescue=$("input[name='Rescue']:checked").val()==null?-1:$("input[name='Rescue']:checked").val();
 		Service=$("input[name='Service']:checked").val()==null?-1:$("input[name='Service']:checked").val();
 		Crime=$("input[name='Crime']:checked").val()==null?-1:$("input[name='Crime']:checked").val();
@@ -1089,7 +1098,7 @@
 		
 		$.post("searchSaveHandle.php",{FileBelong:FileBelong,path_prefix:path_prefix,username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
 							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
-							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
+							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
 							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
