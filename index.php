@@ -321,14 +321,14 @@
 											<li id="LaborDisp">2.4.1.1 是否是劳务派遣</li>
 											<label><input name="LaborDisp" type="radio" value="1" onclick="changeColor('LaborDisp')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 											<label><input name="LaborDisp" type="radio" value="0" onclick="changeColor('LaborDisp')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="LaborDisp" type="radio" value="2" onclick="changeColor('LaborDisp')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="LaborDisp" type="radio" value="3" onclick="changeColor('LaborDisp')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<!-- <label><input name="LaborDisp" type="radio" value="2" onclick="changeColor('LaborDisp')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="LaborDisp" type="radio" value="3" onclick="changeColor('LaborDisp')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
-											<li id="Employ">2.4.1.2 和单位还是个人存在雇佣关系</li>
-											<label><input name="Employ" type="radio" value="1" onclick="changeColor('Employ')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-											<label><input name="Employ" type="radio" value="0" onclick="changeColor('Employ')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="Employ" type="radio" value="2" onclick="changeColor('Employ')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-											<label><input name="Employ" type="radio" value="3" onclick="changeColor('Employ')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+											<li id="Employ">2.4.1.2 雇主为单位还是个人</li>
+											<label><input name="Employ" type="radio" value="1" onclick="changeColor('Employ')"/>单位&nbsp;&nbsp;&nbsp; </label>
+											<label><input name="Employ" type="radio" value="0" onclick="changeColor('Employ')"/>个人&nbsp;&nbsp;&nbsp;</label> 
+											<!-- <label><input name="Employ" type="radio" value="2" onclick="changeColor('Employ')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+											<!-- <label><input name="Employ" type="radio" value="3" onclick="changeColor('Employ')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 											<br>
 											<li id="ExistEmp">2.4.1.3 是否存在雇佣关系</li>
 											<label><input name="ExistEmp" type="radio" value="1" onclick="changeColor('ExistEmp')"/>Yes&nbsp;&nbsp;&nbsp; </label>
