@@ -209,51 +209,51 @@
 									<!-- <label><input name="WorkDeath" type="radio" value="2" onclick="changeColor('WorkDeath')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
 									<!-- <label><input name="WorkDeath" type="radio" value="3" onclick="changeColor('WorkDeath')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Rescue">2.1.7 是否因抢险救灾受伤</li>
+									<li id="Rescue">2.1.9 是否因抢险救灾受伤</li>
 									<label><input name="Rescue" type="radio" value="1" onclick="changeColor('Rescue')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Rescue" type="radio" value="0" onclick="changeColor('Rescue')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Rescue" type="radio" value="2" onclick="changeColor('Rescue')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Rescue" type="radio" value="3" onclick="changeColor('Rescue')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Rescue" type="radio" value="2" onclick="changeColor('Rescue')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Rescue" type="radio" value="3" onclick="changeColor('Rescue')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Service">2.1.8 是否服役相关</li>
+									<li id="Service">2.1.10 是否伤残军人旧伤复发</li>
 									<label><input name="Service" type="radio" value="1" onclick="changeColor('Service')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Service" type="radio" value="0" onclick="changeColor('Service')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Service" type="radio" value="2" onclick="changeColor('Service')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Service" type="radio" value="3" onclick="changeColor('Service')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Service" type="radio" value="2" onclick="changeColor('Service')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Service" type="radio" value="3" onclick="changeColor('Service')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Crime">2.1.9 是否故意犯罪</li>
+									<li id="Crime">2.1.11 是否故意犯罪</li>
 									<label><input name="Crime" type="radio" value="1" onclick="changeColor('Crime')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Crime" type="radio" value="0" onclick="changeColor('Crime')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Crime" type="radio" value="2" onclick="changeColor('Crime')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Crime" type="radio" value="3" onclick="changeColor('Crime')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Crime" type="radio" value="2" onclick="changeColor('Crime')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Crime" type="radio" value="3" onclick="changeColor('Crime')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Drink">2.1.10 是否醉酒或吸毒</li>
+									<li id="Drink">2.1.12 是否醉酒或吸毒</li>
 									<label><input name="Drink" type="radio" value="1" onclick="changeColor('Drink')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Drink" type="radio" value="0" onclick="changeColor('Drink')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Drink" type="radio" value="2" onclick="changeColor('Drink')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Drink" type="radio" value="3" onclick="changeColor('Drink')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Drink" type="radio" value="2" onclick="changeColor('Drink')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Drink" type="radio" value="3" onclick="changeColor('Drink')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Suicide">2.1.11 是否自残或自杀</li>
+									<li id="Suicide">2.1.13 是否自残或自杀</li>
 									<label><input name="Suicide" type="radio" value="1" onclick="changeColor('Suicide')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Suicide" type="radio" value="0" onclick="changeColor('Suicide')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Suicide" type="radio" value="2" onclick="changeColor('Suicide')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Suicide" type="radio" value="3" onclick="changeColor('Suicide')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Suicide" type="radio" value="2" onclick="changeColor('Suicide')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Suicide" type="radio" value="3" onclick="changeColor('Suicide')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 								</ul>
 							</li>
 							<li>2.2 工伤认定状态
 								<ul>
-									<li id="InjIden">2.2.1 是否已做工伤认定</li>
+									<li id="InjIden">2.2.1 是否已进行工伤认定</li>
 									<label><input name="InjIden" type="radio" value="1" onclick="changeColor('InjIden')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="InjIden" type="radio" value="0" onclick="changeColor('InjIden')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="InjIden" type="radio" value="2" onclick="changeColor('InjIden')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="InjIden" type="radio" value="3" onclick="changeColor('InjIden')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="InjIden" type="radio" value="2" onclick="changeColor('InjIden')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="InjIden" type="radio" value="3" onclick="changeColor('InjIden')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="Valid">2.2.2 是否在工伤认定有效期内</li>
 									<label><input name="Valid" type="radio" value="1" onclick="changeColor('Valid')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Valid" type="radio" value="0" onclick="changeColor('Valid')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Valid" type="radio" value="2" onclick="changeColor('Valid')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Valid" type="radio" value="3" onclick="changeColor('Valid')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Valid" type="radio" value="2" onclick="changeColor('Valid')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Valid" type="radio" value="3" onclick="changeColor('Valid')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="InjDate">2.2.3 工伤发生的时间</li>
 									<input id="dateid" name="InjDate" type="text" data-beatpicker="true" data-beatpicker-position="['*','*']"  data-beatpicker-module="today,clear" onclick="changeColor('InjDate')"/>
@@ -267,44 +267,44 @@
 									<li id="AdmitInj">2.3.1 雇主是否承认工伤</li>
 									<label><input name="AdmitInj" type="radio" value="1" onclick="changeColor('AdmitInj')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="AdmitInj" type="radio" value="0" onclick="changeColor('AdmitInj')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="AdmitInj" type="radio" value="2" onclick="changeColor('AdmitInj')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="AdmitInj" type="radio" value="3" onclick="changeColor('AdmitInj')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="AdmitInj" type="radio" value="2" onclick="changeColor('AdmitInj')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="AdmitInj" type="radio" value="3" onclick="changeColor('AdmitInj')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="WillPay">2.3.2 雇主是否原意赔付</li>
 									<label><input name="WillPay" type="radio" value="1" onclick="changeColor('WillPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="WillPay" type="radio" value="0" onclick="changeColor('WillPay')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WillPay" type="radio" value="2" onclick="changeColor('WillPay')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WillPay" type="radio" value="3" onclick="changeColor('WillPay')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="WillPay" type="radio" value="2" onclick="changeColor('WillPay')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="WillPay" type="radio" value="3" onclick="changeColor('WillPay')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="AmountDispute">2.3.3 数额是否存在争议</li>
+									<li id="AmountDispute">2.3.3 赔付数额是否存在争议</li>
 									<label><input name="AmountDispute" type="radio" value="1" onclick="changeColor('AmountDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="AmountDispute" type="radio" value="0" onclick="changeColor('AmountDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="AmountDispute" type="radio" value="2" onclick="changeColor('AmountDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="AmountDispute" type="radio" value="3" onclick="changeColor('AmountDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="AmountDispute" type="radio" value="2" onclick="changeColor('AmountDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="AmountDispute" type="radio" value="3" onclick="changeColor('AmountDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="RangeDispute">2.3.4 覆盖范围是否存在争议</li>
 									<label><input name="RangeDispute" type="radio" value="1" onclick="changeColor('RangeDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="RangeDispute" type="radio" value="0" onclick="changeColor('RangeDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="RangeDispute" type="radio" value="2" onclick="changeColor('RangeDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="RangeDispute" type="radio" value="3" onclick="changeColor('RangeDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="RangeDispute" type="radio" value="2" onclick="changeColor('RangeDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="RangeDispute" type="radio" value="3" onclick="changeColor('RangeDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="SettlePrivate">2.3.5 雇主是否想私了</li>
 									<label><input name="SettlePrivate" type="radio" value="1" onclick="changeColor('SettlePrivate')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="SettlePrivate" type="radio" value="0" onclick="changeColor('SettlePrivate')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="SettlePrivate" type="radio" value="2" onclick="changeColor('SettlePrivate')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="SettlePrivate" type="radio" value="3" onclick="changeColor('SettlePrivate')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="SettlePrivate" type="radio" value="2" onclick="changeColor('SettlePrivate')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="SettlePrivate" type="radio" value="3" onclick="changeColor('SettlePrivate')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="SickDispute">2.3.6 是否有病假争议</li>
 									<label><input name="SickDispute" type="radio" value="1" onclick="changeColor('SickDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="SickDispute" type="radio" value="0" onclick="changeColor('SickDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="SickDispute" type="radio" value="2" onclick="changeColor('SickDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="SickDispute" type="radio" value="3" onclick="changeColor('SickDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="SickDispute" type="radio" value="2" onclick="changeColor('SickDispute')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="SickDispute" type="radio" value="3" onclick="changeColor('SickDispute')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="LaborArbi">2.3.7 是否经过劳动仲裁</li>
 									<label><input name="LaborArbi" type="radio" value="1" onclick="changeColor('LaborArbi')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="LaborArbi" type="radio" value="0" onclick="changeColor('LaborArbi')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="LaborArbi" type="radio" value="2" onclick="changeColor('LaborArbi')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="LaborArbi" type="radio" value="3" onclick="changeColor('LaborArbi')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="LaborArbi" type="radio" value="2" onclick="changeColor('LaborArbi')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="LaborArbi" type="radio" value="3" onclick="changeColor('LaborArbi')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 								</ul>
 							</li>
