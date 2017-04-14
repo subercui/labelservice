@@ -147,11 +147,11 @@
 									<label><input name="DisptRes" type="radio" value="1" onclick="changeColor('DisptRes')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
-							<li id="AppPay">1.8 是否询问申请工伤赔偿的解决方案</li>
+							<li id="AppPay">1.8 是否询问如何申请工伤赔偿的流程</li>
 									<label><input name="AppPay" type="radio" value="1" onclick="changeColor('AppPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="AppPay" type="radio" value="0" onclick="changeColor('AppPay')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
-							<li id="CondUnre">1.9 其他状态无关的问题</li>
+							<li id="CondUnre">1.9 其他工伤或非工伤领域的问题</li>
 									<label><input name="CondUnre" type="radio" value="1" onclick="changeColor('CondUnre')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="CondUnre" type="radio" value="0" onclick="changeColor('CondUnre')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
@@ -161,7 +161,7 @@
 					<ul>
 							<li>2.1 工伤判定依据
 								<ul>
-									<li id="WorkTime">2.1.1 是否是工作时间</li>
+									<li id="WorkTime">2.1.1 是否在工作时间</li>
 									<label><input name="WorkTime" type="radio" value="1" onclick="changeColor('WorkTime')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="WorkTime" type="radio" value="0" onclick="changeColor('WorkTime')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 									<!-- <label><input name="WorkTime" type="radio" value="2" onclick="changeColor('WorkTime')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
@@ -170,34 +170,34 @@
 									<li id="WorkPlace">2.1.2 是否在工作场所</li>
 									<label><input name="WorkPlace" type="radio" value="1" onclick="changeColor('WorkPlace')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="WorkPlace" type="radio" value="0" onclick="changeColor('WorkPlace')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WorkPlace" type="radio" value="2" onclick="changeColor('WorkPlace')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WorkPlace" type="radio" value="3" onclick="changeColor('WorkPlace')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="WorkPlace" type="radio" value="2" onclick="changeColor('WorkPlace')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="WorkPlace" type="radio" value="3" onclick="changeColor('WorkPlace')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="JobRel">2.1.3 是否从事和工作相关事务</li>
 									<label><input name="JobRel" type="radio" value="1" onclick="changeColor('JobRel')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="JobRel" type="radio" value="0" onclick="changeColor('JobRel')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="JobRel" type="radio" value="2" onclick="changeColor('JobRel')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="JobRel" type="radio" value="3" onclick="changeColor('JobRel')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="JobRel" type="radio" value="2" onclick="changeColor('JobRel')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="JobRel" type="radio" value="3" onclick="changeColor('JobRel')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="DiseRel">2.1.4 是否和职业病相关</li>
 									<label><input name="DiseRel" type="radio" value="1" onclick="changeColor('DiseRel')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="DiseRel" type="radio" value="0" onclick="changeColor('DiseRel')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="DiseRel" type="radio" value="2" onclick="changeColor('DiseRel')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="DiseRel" type="radio" value="3" onclick="changeColor('DiseRel')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="DiseRel" type="radio" value="2" onclick="changeColor('DiseRel')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="DiseRel" type="radio" value="3" onclick="changeColor('DiseRel')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="OutForPub">2.1.5 是否因公外出</li>
+									<li id="OutForPub">2.1.5 是否因公外出受伤</li>
 									<label><input name="OutForPub" type="radio" value="1" onclick="changeColor('OutForPub')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="OutForPub" type="radio" value="0" onclick="changeColor('OutForPub')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="OutForPub" type="radio" value="2" onclick="changeColor('OutForPub')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="OutForPub" type="radio" value="3" onclick="changeColor('OutForPub')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="OutForPub" type="radio" value="2" onclick="changeColor('OutForPub')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="OutForPub" type="radio" value="3" onclick="changeColor('OutForPub')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="OnOff">2.1.6 是否上下班</li>
+									<li id="OnOff">2.1.6 是否上下班途中受伤</li>
 									<label><input name="OnOff" type="radio" value="1" onclick="changeColor('OnOff')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="OnOff" type="radio" value="0" onclick="changeColor('OnOff')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="OnOff" type="radio" value="2" onclick="changeColor('OnOff')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="OnOff" type="radio" value="3" onclick="changeColor('OnOff')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="OnOff" type="radio" value="2" onclick="changeColor('OnOff')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="OnOff" type="radio" value="3" onclick="changeColor('OnOff')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li id="Rescue">2.1.7 是否抢险救灾</li>
+									<li id="Rescue">2.1.7 是否因抢险救灾受伤</li>
 									<label><input name="Rescue" type="radio" value="1" onclick="changeColor('Rescue')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Rescue" type="radio" value="0" onclick="changeColor('Rescue')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 									<label><input name="Rescue" type="radio" value="2" onclick="changeColor('Rescue')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
