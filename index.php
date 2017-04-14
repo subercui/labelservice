@@ -378,6 +378,15 @@
 									<br>
 									<li id="Level">2.5.2 分级（1：10）</li>
 									<input type="text" class="form-control" name="Level">
+									<br>
+									<li id="Death">2.5.3 伤者是否死亡</li>
+									<label><input name="Death" type="radio" value="1" onclick="changeColor('Death')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="Death" type="radio" value="0" onclick="changeColor('Death')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="Slight">2.5.4 是否经鉴定未达伤残等级</li>
+									<label><input name="Slight" type="radio" value="1" onclick="changeColor('Slight')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="Slight" type="radio" value="0" onclick="changeColor('Slight')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
 								</ul>
 							</li>
 							<li>2.6 保险相关
@@ -446,7 +455,7 @@
 	var filename;
 	var curPage;
 	var FileBelong;
-    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
+    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Death","Slight","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -710,6 +719,8 @@
 		ValidContr=$("input[name='ValidContr']:checked").val()==null?-1:$("input[name='ValidContr']:checked").val();
 		ConfrmLevel=$("input[name='ConfrmLevel']:checked").val()==null?-1:$("input[name='ConfrmLevel']:checked").val();
 		Level=$("input[name='Level']").val()==0?-1:$("input[name='Level']").val();
+		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
+		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
@@ -737,7 +748,7 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){		
 			data=JSON.parse(msg);
 			if(data[0]==1){//成功标志
@@ -929,6 +940,8 @@
 		ValidContr=$("input[name='ValidContr']:checked").val()==null?-1:$("input[name='ValidContr']:checked").val();
 		ConfrmLevel=$("input[name='ConfrmLevel']:checked").val()==null?-1:$("input[name='ConfrmLevel']:checked").val();
 		Level=$("input[name='Level']").val()==0?-1:$("input[name='Level']").val();
+		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
+		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
@@ -956,7 +969,7 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
 			if(msg=='0'){
 				alert("未更新成功，请重新更新");
@@ -1071,6 +1084,8 @@
 		ValidContr=$("input[name='ValidContr']:checked").val()==null?-1:$("input[name='ValidContr']:checked").val();
 		ConfrmLevel=$("input[name='ConfrmLevel']:checked").val()==null?-1:$("input[name='ConfrmLevel']:checked").val();
 		Level=$("input[name='Level']").val()==0?-1:$("input[name='Level']").val();
+		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
+		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
@@ -1099,7 +1114,7 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
 			if(msg==1){
 				if(FileBelong!=1 && FileBelong!=3){
