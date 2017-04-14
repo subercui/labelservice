@@ -4,3 +4,22 @@
 	1.3 function showresult
 	1.4 修改654行开始的function save
 	1.5 修改723行的 $.post("SaveHandle.php"
+	1.6 function update
+	1.7 $.post("UpdateHandle.php"
+	1.8 改1011行SaveOrUpdate
+	1.9 1081行$.post("searchSaveHandle.php"
+
+2.SaveHandle.php
+	2.1 添加项目
+	2.2 修改60行sql语句
+	
+
+3.UpdateHandle.php
+	3.1 添加项目
+	3.2 更改58行sql语句
+
+4.searchSaveHandle.php
+	4.1添加项目
+	4.2 更改63行sql语句
+
+5.更新数据库表属性

@@ -164,8 +164,8 @@
 									<li id="WorkTime">2.1.1 是否是工作时间</li>
 									<label><input name="WorkTime" type="radio" value="1" onclick="changeColor('WorkTime')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="WorkTime" type="radio" value="0" onclick="changeColor('WorkTime')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WorkTime" type="radio" value="2" onclick="changeColor('WorkTime')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="WorkTime" type="radio" value="3" onclick="changeColor('WorkTime')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="WorkTime" type="radio" value="2" onclick="changeColor('WorkTime')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="WorkTime" type="radio" value="3" onclick="changeColor('WorkTime')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="WorkPlace">2.1.2 是否在工作场所</li>
 									<label><input name="WorkPlace" type="radio" value="1" onclick="changeColor('WorkPlace')"/>Yes&nbsp;&nbsp;&nbsp; </label>
