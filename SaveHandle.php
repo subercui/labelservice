@@ -22,6 +22,7 @@
 	$DiseRel=$_REQUEST['DiseRel'];
 	$OutForPub=$_REQUEST['OutForPub'];
 	$OnOff=$_REQUEST['OnOff'];
+	$PrpOnOff=$_REQUEST['PrpOnOff'];
 	$Rescue=$_REQUEST['Rescue'];
 	$Service=$_REQUEST['Service'];
 	$Crime=$_REQUEST['Crime'];
@@ -58,11 +59,11 @@
 	$BearMedicalFee=$_REQUEST['BearMedicalFee'];
 	$Identity=$_REQUEST['Identity'];
 	$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,DisptRes,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
-							OutForPub,OnOff,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
+							OutForPub,OnOff,PrpOnOff,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
 							LaborArbi,LaborDisp,Employ,ExistEmp,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Insurance,PersonalWage,SocialWage,
 							HaveMedicalFee,MedicalFee,BearMedicalFee,Identity) 
 							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$DisptRes','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
-							'$OutForPub','$OnOff','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
+							'$OutForPub','$OnOff','$PrpOnOff','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
 							'$LaborArbi','$LaborDisp','$Employ','$ExistEmp','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Insurance','$PersonalWage','$SocialWage',
 							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$Identity')";
 	
