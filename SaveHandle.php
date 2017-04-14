@@ -13,7 +13,7 @@
 	$InjRange=$_REQUEST['InjRange'];
 	$BearPay=$_REQUEST['BearPay'];
 	$PayMeth=$_REQUEST['PayMeth'];
-	$GenMeth=$_REQUEST['GenMeth'];
+	$DisptRes=$_REQUEST['DisptRes'];
 	$AppPay=$_REQUEST['AppPay'];
 	$CondUnre=$_REQUEST['CondUnre'];
 	$WorkTime=$_REQUEST['WorkTime'];
@@ -57,11 +57,11 @@
 	$MedicalFee=$_REQUEST['MedicalFee'];
 	$BearMedicalFee=$_REQUEST['BearMedicalFee'];
 	$Identity=$_REQUEST['Identity'];
-	$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,GenMeth,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
+	$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,DisptRes,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
 							OutForPub,OnOff,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
 							LaborArbi,LaborDisp,Employ,ExistEmp,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Insurance,PersonalWage,SocialWage,
 							HaveMedicalFee,MedicalFee,BearMedicalFee,Identity) 
-							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$GenMeth','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
+							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$DisptRes','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
 							'$OutForPub','$OnOff','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
 							'$LaborArbi','$LaborDisp','$Employ','$ExistEmp','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Insurance','$PersonalWage','$SocialWage',
 							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$Identity')";

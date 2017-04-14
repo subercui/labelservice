@@ -11,7 +11,7 @@
 	$InjRange=$_REQUEST['InjRange'];
 	$BearPay=$_REQUEST['BearPay'];
 	$PayMeth=$_REQUEST['PayMeth'];
-	$GenMeth=$_REQUEST['GenMeth'];
+	$DisptRes=$_REQUEST['DisptRes'];
 	$AppPay=$_REQUEST['AppPay'];
 	$CondUnre=$_REQUEST['CondUnre'];
 	$WorkTime=$_REQUEST['WorkTime'];
@@ -55,7 +55,7 @@
 	$MedicalFee=$_REQUEST['MedicalFee'];
 	$BearMedicalFee=$_REQUEST['BearMedicalFee'];
 	$Identity=$_REQUEST['Identity'];
-	$sql="update feature set CaseID='$CaseID',Problem='$Problem',Anwser='$Anwser',GetPay='$GetPay',AssoPay='$AssoPay',InjuryDegree='$InjuryDegree',InjRange='$InjRange',BearPay='$BearPay',PayMeth='$PayMeth',GenMeth='$GenMeth',AppPay='$AppPay',CondUnre='$CondUnre',WorkTime='$WorkTime',WorkPlace='$WorkPlace',JobRel='$JobRel',DiseRel='$DiseRel',
+	$sql="update feature set CaseID='$CaseID',Problem='$Problem',Anwser='$Anwser',GetPay='$GetPay',AssoPay='$AssoPay',InjuryDegree='$InjuryDegree',InjRange='$InjRange',BearPay='$BearPay',PayMeth='$PayMeth',DisptRes='$DisptRes',AppPay='$AppPay',CondUnre='$CondUnre',WorkTime='$WorkTime',WorkPlace='$WorkPlace',JobRel='$JobRel',DiseRel='$DiseRel',
 							OutForPub='$OutForPub',OnOff='$OnOff',Rescue='$Rescue',Service='$Service',Crime='$Crime',Drink='$Drink',Suicide='$Suicide',InjIden='$InjIden',Valid='$Valid',InjDate='$InjDate',Year='$Year',Month='$Month',Day='$Day',AdmitInj='$AdmitInj',WillPay='$WillPay',AmountDispute='$AmountDispute',RangeDispute='$RangeDispute',SettlePrivate='$SettlePrivate',SickDispute='$SickDispute',
 							LaborArbi='$LaborArbi',LaborDisp='$LaborDisp',Employ='$Employ',ExistEmp='$ExistEmp',Qualify='$Qualify',EndLabor='$EndLabor',LaborContr='$LaborContr',HaveContr='$HaveContr',ValidContr='$ValidContr',ConfrmLevel='$ConfrmLevel',Level='$Level',Insurance='$Insurance',PersonalWage='$PersonalWage',SocialWage='$SocialWage',
 							HaveMedicalFee='$HaveMedicalFee',MedicalFee='$MedicalFee',BearMedicalFee='$BearMedicalFee',Identity='$Identity' where CaseID='$CaseID' and username='$username'";

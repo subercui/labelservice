@@ -119,7 +119,7 @@
 				<ul>
 					<li>1.问题
 						<ul>
-							<li id="GetPay">1.1 是否算工伤/是否可以拿到赔偿</li>
+							<li id="GetPay">1.1 是否询问算工伤/是否询问满足工伤赔偿条件</li>
 									<label><input name="GetPay" type="radio" value="1" onclick="changeColor('GetPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="GetPay" type="radio" value="0" onclick="changeColor('GetPay')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 							<br>
@@ -135,7 +135,7 @@
 									<label><input name="InjRange" type="radio" value="1" onclick="changeColor('InjRange')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="InjRange" type="radio" value="0" onclick="changeColor('InjRange')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
-							<li id="BearPay">1.5 是否询问赔偿金承担方</li>
+							<li id="BearPay">1.5 是否询问赔偿金承担方（如公司/社保）</li>
 									<label><input name="BearPay" type="radio" value="1" onclick="changeColor('BearPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="BearPay" type="radio" value="0" onclick="changeColor('BearPay')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
@@ -143,9 +143,9 @@
 									<label><input name="PayMeth" type="radio" value="1" onclick="changeColor('PayMeth')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="PayMeth" type="radio" value="0" onclick="changeColor('PayMeth')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
-							<li id="GenMeth">1.7 是否是一般性解决方案</li>
-									<label><input name="GenMeth" type="radio" value="1" onclick="changeColor('GenMeth')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="GenMeth" type="radio" value="0" onclick="changeColor('GenMeth')"/>NO&nbsp;&nbsp;&nbsp;</label>
+							<li id="DisptRes">1.7 是否询问和雇主纠纷的解决方案</li>
+									<label><input name="DisptRes" type="radio" value="1" onclick="changeColor('DisptRes')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label>
 							<br>
 							<li id="AppPay">1.8 是否询问申请工伤赔偿的解决方案</li>
 									<label><input name="AppPay" type="radio" value="1" onclick="changeColor('AppPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
@@ -436,7 +436,7 @@
 	var filename;
 	var curPage;
 	var FileBelong;
-    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","GenMeth","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","LaborDisp","Employ","ExistEmp","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
+    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","LaborDisp","Employ","ExistEmp","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -661,7 +661,7 @@
 		InjRange=$("input[name='InjRange']:checked").val()==null?-1:$("input[name='InjRange']:checked").val();
 		BearPay=$("input[name='BearPay']:checked").val()==null?-1:$("input[name='BearPay']:checked").val();
 		PayMeth=$("input[name='PayMeth']:checked").val()==null?-1:$("input[name='PayMeth']:checked").val();
-		GenMeth=$("input[name='GenMeth']:checked").val()==null?-1:$("input[name='GenMeth']:checked").val();
+		DisptRes=$("input[name='DisptRes']:checked").val()==null?-1:$("input[name='DisptRes']:checked").val();
 		AppPay=$("input[name='AppPay']:checked").val()==null?-1:$("input[name='AppPay']:checked").val();
 		CondUnre=$("input[name='CondUnre']:checked").val()==null?-1:$("input[name='CondUnre']:checked").val();
 		WorkTime=$("input[name='WorkTime']:checked").val()==null?-1:$("input[name='WorkTime']:checked").val();;
@@ -721,7 +721,7 @@
 		}
 		
 		$.post("SaveHandle.php",{path_prefix:path_prefix,filename:filename,flag:flag,username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
-							GenMeth:GenMeth,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
+							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
@@ -878,7 +878,7 @@
 		InjRange=$("input[name='InjRange']:checked").val()==null?-1:$("input[name='InjRange']:checked").val();
 		BearPay=$("input[name='BearPay']:checked").val()==null?-1:$("input[name='BearPay']:checked").val();
 		PayMeth=$("input[name='PayMeth']:checked").val()==null?-1:$("input[name='PayMeth']:checked").val();
-		GenMeth=$("input[name='GenMeth']:checked").val()==null?-1:$("input[name='GenMeth']:checked").val();
+		DisptRes=$("input[name='DisptRes']:checked").val()==null?-1:$("input[name='DisptRes']:checked").val();
 		AppPay=$("input[name='AppPay']:checked").val()==null?-1:$("input[name='AppPay']:checked").val();
 		CondUnre=$("input[name='CondUnre']:checked").val()==null?-1:$("input[name='CondUnre']:checked").val();
 		WorkTime=$("input[name='WorkTime']:checked").val()==null?-1:$("input[name='WorkTime']:checked").val();;
@@ -938,7 +938,7 @@
 		}
 		
 		$.post("UpdateHandle.php",{username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
-							GenMeth:GenMeth,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
+							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
@@ -1018,7 +1018,7 @@
 		InjRange=$("input[name='InjRange']:checked").val()==null?-1:$("input[name='InjRange']:checked").val();
 		BearPay=$("input[name='BearPay']:checked").val()==null?-1:$("input[name='BearPay']:checked").val();
 		PayMeth=$("input[name='PayMeth']:checked").val()==null?-1:$("input[name='PayMeth']:checked").val();
-		GenMeth=$("input[name='GenMeth']:checked").val()==null?-1:$("input[name='GenMeth']:checked").val();
+		DisptRes=$("input[name='DisptRes']:checked").val()==null?-1:$("input[name='DisptRes']:checked").val();
 		AppPay=$("input[name='AppPay']:checked").val()==null?-1:$("input[name='AppPay']:checked").val();
 		CondUnre=$("input[name='CondUnre']:checked").val()==null?-1:$("input[name='CondUnre']:checked").val();
 		WorkTime=$("input[name='WorkTime']:checked").val()==null?-1:$("input[name='WorkTime']:checked").val();;
@@ -1079,7 +1079,7 @@
 		}
 		
 		$.post("searchSaveHandle.php",{FileBelong:FileBelong,path_prefix:path_prefix,username:username,CaseID:CaseID,Problem:Problem,Anwser:Anwser,GetPay:GetPay,AssoPay:AssoPay,InjuryDegree:InjuryDegree,InjRange:InjRange,BearPay:BearPay,PayMeth:PayMeth,
-							GenMeth:GenMeth,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
+							DisptRes:DisptRes,AppPay:AppPay,CondUnre:CondUnre,WorkTime:WorkTime,WorkPlace:WorkPlace,JobRel:JobRel,DiseRel:DiseRel,
 							OutForPub:OutForPub,OnOff:OnOff,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,LaborDisp:LaborDisp,Employ:Employ,ExistEmp:ExistEmp,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
