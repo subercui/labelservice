@@ -55,20 +55,34 @@
 	$Death=$_REQUEST['Death'];
 	$Slight=$_REQUEST['Slight'];
 	$Insurance=$_REQUEST['Insurance'];
+	$SuffctIns=$_REQUEST['SuffctIns'];
 	$PersonalWage=$_REQUEST['PersonalWage'];
 	$SocialWage=$_REQUEST['SocialWage'];
 	$HaveMedicalFee=$_REQUEST['HaveMedicalFee'];
 	$MedicalFee=$_REQUEST['MedicalFee'];
 	$BearMedicalFee=$_REQUEST['BearMedicalFee'];
+	$LeftMedFee=$_REQUEST['LeftMedFee'];
+	$MaimAstDispute=$_REQUEST['MaimAstDispute'];
+	$AllowanceDispute=$_REQUEST['AllowanceDispute'];
+	$MedAstDispute=$_REQUEST['MedAstDispute'];
+	$MaimOccuDispute=$_REQUEST['MaimOccuDispute'];
+	$SalaryDispute=$_REQUEST['SalaryDispute'];
+	$HealthFeeDispute=$_REQUEST['HealthFeeDispute'];
+	$OldWoundDispute=$_REQUEST['OldWoundDispute'];
+	$DeathAstDispute=$_REQUEST['DeathAstDispute'];
+	$InsfctInsDispute=$_REQUEST['InsfctInsDispute'];
 	$Identity=$_REQUEST['Identity'];
 	$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,DisptRes,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
 							OutForPub,OnOff,PrpOnOff,WorkDeath,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
-							LaborArbi,RefuAsct,LaborDisp,Employ,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Death,Slight,Insurance,PersonalWage,SocialWage,
-							HaveMedicalFee,MedicalFee,BearMedicalFee,Identity) 
+							LaborArbi,RefuAsct,LaborDisp,Employ,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Death,Slight,Insurance,SuffctIns,PersonalWage,SocialWage,
+							HaveMedicalFee,MedicalFee,BearMedicalFee,LeftMedFee,MaimAstDispute,AllowanceDispute,MedAstDispute,MaimOccuDispute,SalaryDispute,HealthFeeDispute,OldWoundDispute,
+							DeathAstDispute,InsfctInsDispute,Identity) 
 							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$DisptRes','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
 							'$OutForPub','$OnOff','$PrpOnOff','$WorkDeath','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
-							'$LaborArbi','$RefuAsct','$LaborDisp','$Employ','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Death','$Slight','$Insurance','$PersonalWage','$SocialWage',
-							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$Identity')";
+							'$LaborArbi','$RefuAsct','$LaborDisp','$Employ','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Death','$Slight','$Insurance','$SuffctIns','$PersonalWage','$SocialWage',
+							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$LeftMedFee','$MaimAstDispute','$AllowanceDispute',
+							'$MedAstDispute','$MaimOccuDispute','$SalaryDispute','$HealthFeeDispute','$OldWoundDispute',
+							'$DeathAstDispute','$InsfctInsDispute','$Identity')";
 	
 	if(mysql_query($sql,$con)){
 		//2、获取下一个文件内容

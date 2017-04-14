@@ -368,7 +368,7 @@
 									</li>
 								</ul>
 							</li>
-							<li>2.5 工伤级别鉴定
+							<li>2.5 劳动能力伤残等级鉴定
 								<ul>
 									<li id="ConfrmLevel">2.5.1 是否已由权威机构定级</li>
 									<label><input name="ConfrmLevel" type="radio" value="1" onclick="changeColor('ConfrmLevel')"/>Yes&nbsp;&nbsp;&nbsp; </label>
@@ -394,10 +394,13 @@
 									<li id="Insurance">2.6.1 是否已投保</li>
 									<label><input name="Insurance" type="radio" value="1" onclick="changeColor('Insurance')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="Insurance" type="radio" value="0" onclick="changeColor('Insurance')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Insurance" type="radio" value="2" onclick="changeColor('Insurance')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="Insurance" type="radio" value="3" onclick="changeColor('Insurance')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="Insurance" type="radio" value="2" onclick="changeColor('Insurance')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="Insurance" type="radio" value="3" onclick="changeColor('Insurance')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
-									<li>2.6.2 其他 (待补充)</li>
+									<li id="SuffctIns">2.6.2 参保基数是否足额</li>
+									<label><input name="SuffctIns" type="radio" value="1" onclick="changeColor('SuffctIns')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="SuffctIns" type="radio" value="0" onclick="changeColor('SuffctIns')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
 								</ul>
 							</li>
 							<li>2.7 工资相关
@@ -415,8 +418,8 @@
 									<li id="HaveMedicalFee">2.8.1 是否有医疗费开销</li>
 									<label><input name="HaveMedicalFee" type="radio" value="1" onclick="changeColor('HaveMedicalFee')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="HaveMedicalFee" type="radio" value="0" onclick="changeColor('HaveMedicalFee')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="HaveMedicalFee" type="radio" value="2" onclick="changeColor('HaveMedicalFee')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="HaveMedicalFee" type="radio" value="3" onclick="changeColor('HaveMedicalFee')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="HaveMedicalFee" type="radio" value="2" onclick="changeColor('HaveMedicalFee')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="HaveMedicalFee" type="radio" value="3" onclick="changeColor('HaveMedicalFee')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
 									<br>
 									<li id="MedicalFee">2.8.2 医疗费</li>
 									<input type="text" class="form-control" name="MedicalFee">
@@ -424,11 +427,62 @@
 									<li id="BearMedicalFee">2.8.3 雇主是否已承担医疗费</li>
 									<label><input name="BearMedicalFee" type="radio" value="1" onclick="changeColor('BearMedicalFee')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="BearMedicalFee" type="radio" value="0" onclick="changeColor('BearMedicalFee')"/>NO&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="BearMedicalFee" type="radio" value="2" onclick="changeColor('BearMedicalFee')"/>ProYes&nbsp;&nbsp;&nbsp;</label> 
-									<label><input name="BearMedicalFee" type="radio" value="3" onclick="changeColor('BearMedicalFee')"/>ProNo&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="BearMedicalFee" type="radio" value="2" onclick="changeColor('BearMedicalFee')"/>ProYes&nbsp;&nbsp;&nbsp;</label>  -->
+									<!-- <label><input name="BearMedicalFee" type="radio" value="3" onclick="changeColor('BearMedicalFee')"/>ProNo&nbsp;&nbsp;&nbsp;</label> -->
+									<br>
+									<li id="LeftMedFee">2.8.4 是否有后续医疗费需要承担</li>
+									<label><input name="LeftMedFee" type="radio" value="1" onclick="changeColor('LeftMedFee')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="LeftMedFee" type="radio" value="0" onclick="changeColor('LeftMedFee')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 									<br>
 								</ul>
 							</li>
+							<li>2.9 赔偿金额或支付方纠纷
+								<ul>
+									<li id="MaimAstDispute">.2.9.1 是否一次性伤残补助金纠纷</li>
+									<label><input name="MaimAstDispute" type="radio" value="1" onclick="changeColor('MaimAstDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="MaimAstDispute" type="radio" value="0" onclick="changeColor('MaimAstDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="AllowanceDispute">2.9.2 是否伤残津贴纠纷</li>
+									<label><input name="AllowanceDispute" type="radio" value="1" onclick="changeColor('AllowanceDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="AllowanceDispute" type="radio" value="0" onclick="changeColor('AllowanceDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="MedAstDispute">2.9.3 是否一次性工伤医疗补助金纠纷</li>
+									<label><input name="MedAstDispute" type="radio" value="1" onclick="changeColor('MedAstDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="MedAstDispute" type="radio" value="0" onclick="changeColor('MedAstDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="MaimOccuDispute">2.9.4 是否一次性伤残就业补助金纠纷</li>
+									<label><input name="MaimOccuDispute" type="radio" value="1" onclick="changeColor('MaimOccuDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="MaimOccuDispute" type="radio" value="0" onclick="changeColor('MaimOccuDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="SalaryDispute">2.9.5 是否停工留薪期工资纠纷</li>
+									<label><input name="SalaryDispute" type="radio" value="1" onclick="changeColor('SalaryDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="SalaryDispute" type="radio" value="0" onclick="changeColor('SalaryDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="HealthFeeDispute">2.9.6 是否医疗费、护理费等康复费用纠纷</li>
+									<label><input name="HealthFeeDispute" type="radio" value="1" onclick="changeColor('HealthFeeDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="HealthFeeDispute" type="radio" value="0" onclick="changeColor('HealthFeeDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="OldWoundDispute">2.9.7 是否旧病复发工伤待遇纠纷</li>
+									<label><input name="OldWoundDispute" type="radio" value="1" onclick="changeColor('OldWoundDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="OldWoundDispute" type="radio" value="0" onclick="changeColor('OldWoundDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="DeathAstDispute">2.9.8 是否抚恤金及一次性工亡补助金纠纷</li>
+									<label><input name="DeathAstDispute" type="radio" value="1" onclick="changeColor('DeathAstDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="DeathAstDispute" type="radio" value="0" onclick="changeColor('DeathAstDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+									<li id="InsfctInsDispute">2.9.9 用人单位未参保或未足额参保所产生赔偿纠纷</li>
+									<label><input name="InsfctInsDispute" type="radio" value="1" onclick="changeColor('InsfctInsDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
+									<label><input name="InsfctInsDispute" type="radio" value="0" onclick="changeColor('InsfctInsDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<br>
+								</ul>
+							</li>
+							<li id="Age">2.10 伤者年龄（请填写数字）</li>
+							<input type="text" class="form-control" name="Age">
+							<br>
+							<li id="Location">2.11 工伤发生地的地域（省/市）</li>
+							<input type="text" class="form-control" name="Location">
+							<br>
+							
 						</ul>
 					</li>
 					<li>3.提问者身份
@@ -455,7 +509,13 @@
 	var filename;
 	var curPage;
 	var FileBelong;
-    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre","WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime","Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute","SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr","ValidContr","ConfrmLevel","Level","Death","Slight","Insurance","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee","BearMedicalFee","Identity");
+    var Fields=new Array("GetPay","AssoPay","InjuryDegree","InjRange","BearPay","PayMeth","DisptRes","AppPay","CondUnre",
+	"WorkTime","WorkPlace","JobRel","DiseRel","OutForPub","OnOff","PrpOnOff","WorkDeath","Rescue","Service","Crime",
+	"Drink","Suicide","InjIden","Valid","InjDate","Year","Month","Day","AdmitInj","WillPay","AmountDispute","RangeDispute",
+	"SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr",
+	"ValidContr","ConfrmLevel","Level","Death","Slight","Insurance","SuffctIns","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee",
+	"BearMedicalFee","LeftMedFee","MaimAstDispute","AllowanceDispute","MedAstDispute","MaimOccuDispute","SalaryDispute",
+	"HealthFeeDispute","OldWoundDispute","DeathAstDispute","InsfctInsDispute","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -722,11 +782,22 @@
 		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
 		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
+		SuffctIns=$("input[name='SuffctIns']:checked").val()==null?-1:$("input[name='SuffctIns']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
 		HaveMedicalFee=$("input[name='HaveMedicalFee']:checked").val()==null?-1:$("input[name='HaveMedicalFee']:checked").val();
 		MedicalFee=$("input[name='MedicalFee']").val()==0?-1:$("input[name='MedicalFee']").val();
 		BearMedicalFee=$("input[name='BearMedicalFee']:checked").val()==null?-1:$("input[name='BearMedicalFee']:checked").val();
+		LeftMedFee=$("input[name='LeftMedFee']:checked").val()==null?-1:$("input[name='LeftMedFee']:checked").val();
+		MaimAstDispute=$("input[name='MaimAstDispute']:checked").val()==null?-1:$("input[name='MaimAstDispute']:checked").val();
+		AllowanceDispute=$("input[name='AllowanceDispute']:checked").val()==null?-1:$("input[name='AllowanceDispute']:checked").val();
+		MedAstDispute=$("input[name='MedAstDispute']:checked").val()==null?-1:$("input[name='MedAstDispute']:checked").val();
+		MaimOccuDispute=$("input[name='MaimOccuDispute']:checked").val()==null?-1:$("input[name='MaimOccuDispute']:checked").val();
+		SalaryDispute=$("input[name='SalaryDispute']:checked").val()==null?-1:$("input[name='SalaryDispute']:checked").val();
+		HealthFeeDispute=$("input[name='HealthFeeDispute']:checked").val()==null?-1:$("input[name='HealthFeeDispute']:checked").val();
+		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
+		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
+		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -748,8 +819,11 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
-							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){		
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,SuffctIns:SuffctIns,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,
+							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
+							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){		
 			data=JSON.parse(msg);
 			if(data[0]==1){//成功标志
 				if(data[1]==0){//无文档显示标志
@@ -943,11 +1017,22 @@
 		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
 		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
+		SuffctIns=$("input[name='SuffctIns']:checked").val()==null?-1:$("input[name='SuffctIns']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
 		HaveMedicalFee=$("input[name='HaveMedicalFee']:checked").val()==null?-1:$("input[name='HaveMedicalFee']:checked").val();
 		MedicalFee=$("input[name='MedicalFee']").val()==0?-1:$("input[name='MedicalFee']").val();
 		BearMedicalFee=$("input[name='BearMedicalFee']:checked").val()==null?-1:$("input[name='BearMedicalFee']:checked").val();
+		LeftMedFee=$("input[name='LeftMedFee']:checked").val()==null?-1:$("input[name='LeftMedFee']:checked").val();
+		MaimAstDispute=$("input[name='MaimAstDispute']:checked").val()==null?-1:$("input[name='MaimAstDispute']:checked").val();
+		AllowanceDispute=$("input[name='AllowanceDispute']:checked").val()==null?-1:$("input[name='AllowanceDispute']:checked").val();
+		MedAstDispute=$("input[name='MedAstDispute']:checked").val()==null?-1:$("input[name='MedAstDispute']:checked").val();
+		MaimOccuDispute=$("input[name='MaimOccuDispute']:checked").val()==null?-1:$("input[name='MaimOccuDispute']:checked").val();
+		SalaryDispute=$("input[name='SalaryDispute']:checked").val()==null?-1:$("input[name='SalaryDispute']:checked").val();
+		HealthFeeDispute=$("input[name='HealthFeeDispute']:checked").val()==null?-1:$("input[name='HealthFeeDispute']:checked").val();
+		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
+		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
+		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -969,8 +1054,11 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
-							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,SuffctIns:SuffctIns,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
+							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
+							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){
 			if(msg=='0'){
 				alert("未更新成功，请重新更新");
 			}
@@ -1087,11 +1175,22 @@
 		Death=$("input[name='Death']:checked").val()==null?-1:$("input[name='Death']:checked").val();
 		Slight=$("input[name='Slight']:checked").val()==null?-1:$("input[name='Slight']:checked").val();
 		Insurance=$("input[name='Insurance']:checked").val()==null?-1:$("input[name='Insurance']:checked").val();
+		SuffctIns=$("input[name='SuffctIns']:checked").val()==null?-1:$("input[name='SuffctIns']:checked").val();
 		PersonalWage=$("input[name='PersonalWage']").val()==0?-1:$("input[name='PersonalWage']").val();
 		SocialWage=$("input[name='SocialWage']").val()==0?-1:$("input[name='SocialWage']").val();
 		HaveMedicalFee=$("input[name='HaveMedicalFee']:checked").val()==null?-1:$("input[name='HaveMedicalFee']:checked").val();
 		MedicalFee=$("input[name='MedicalFee']").val()==0?-1:$("input[name='MedicalFee']").val();
 		BearMedicalFee=$("input[name='BearMedicalFee']:checked").val()==null?-1:$("input[name='BearMedicalFee']:checked").val();
+		LeftMedFee=$("input[name='LeftMedFee']:checked").val()==null?-1:$("input[name='LeftMedFee']:checked").val();
+		MaimAstDispute=$("input[name='MaimAstDispute']:checked").val()==null?-1:$("input[name='MaimAstDispute']:checked").val();
+		AllowanceDispute=$("input[name='AllowanceDispute']:checked").val()==null?-1:$("input[name='AllowanceDispute']:checked").val();
+		MedAstDispute=$("input[name='MedAstDispute']:checked").val()==null?-1:$("input[name='MedAstDispute']:checked").val();
+		MaimOccuDispute=$("input[name='MaimOccuDispute']:checked").val()==null?-1:$("input[name='MaimOccuDispute']:checked").val();
+		SalaryDispute=$("input[name='SalaryDispute']:checked").val()==null?-1:$("input[name='SalaryDispute']:checked").val();
+		HealthFeeDispute=$("input[name='HealthFeeDispute']:checked").val()==null?-1:$("input[name='HealthFeeDispute']:checked").val();
+		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
+		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
+		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();	
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		
@@ -1114,8 +1213,11 @@
 							OutForPub:OutForPub,OnOff:OnOff,PrpOnOff:PrpOnOff,WorkDeath:WorkDeath,Rescue:Rescue,Service:Service,Crime:Crime,Drink:Drink,Suicide:Suicide,InjIden:InjIden,Valid:Valid,
 							InjDate:InjDate,Year:Year,Month:Month,Day:Day,AdmitInj:AdmitInj,WillPay:WillPay,AmountDispute:AmountDispute,RangeDispute:RangeDispute,SettlePrivate:SettlePrivate,SickDispute:SickDispute,
 							LaborArbi:LaborArbi,RefuAsct:RefuAsct,LaborDisp:LaborDisp,Employ:Employ,Qualify:Qualify,EndLabor:EndLabor,LaborContr:LaborContr,
-							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,PersonalWage:PersonalWage,SocialWage:SocialWage,
-							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,Identity:Identity},function(msg){
+							HaveContr:HaveContr,ValidContr:ValidContr,ConfrmLevel:ConfrmLevel,Level:Level,Death:Death,Slight:Slight,Insurance:Insurance,SuffctIns:SuffctIns,PersonalWage:PersonalWage,SocialWage:SocialWage,
+							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
+							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
+							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){
 			if(msg==1){
 				if(FileBelong!=1 && FileBelong!=3){
 					$("#Lab").html(parseInt($("#Lab").text())+1);

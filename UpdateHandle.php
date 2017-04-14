@@ -53,16 +53,31 @@
 	$Death=$_REQUEST['Death'];
 	$Slight=$_REQUEST['Slight'];
 	$Insurance=$_REQUEST['Insurance'];
+	$SuffctIns=$_REQUEST['SuffctIns'];
 	$PersonalWage=$_REQUEST['PersonalWage'];
 	$SocialWage=$_REQUEST['SocialWage'];
 	$HaveMedicalFee=$_REQUEST['HaveMedicalFee'];
 	$MedicalFee=$_REQUEST['MedicalFee'];
 	$BearMedicalFee=$_REQUEST['BearMedicalFee'];
+	$LeftMedFee=$_REQUEST['LeftMedFee'];
+	$MaimAstDispute=$_REQUEST['MaimAstDispute'];
+	$AllowanceDispute=$_REQUEST['AllowanceDispute'];
+	$MedAstDispute=$_REQUEST['MedAstDispute'];
+	$MaimOccuDispute=$_REQUEST['MaimOccuDispute'];
+	$SalaryDispute=$_REQUEST['SalaryDispute'];
+	$HealthFeeDispute=$_REQUEST['HealthFeeDispute'];
+	$OldWoundDispute=$_REQUEST['OldWoundDispute'];
+	$DeathAstDispute=$_REQUEST['DeathAstDispute'];
+	$InsfctInsDispute=$_REQUEST['InsfctInsDispute'];
 	$Identity=$_REQUEST['Identity'];
 	$sql="update feature set CaseID='$CaseID',Problem='$Problem',Anwser='$Anwser',GetPay='$GetPay',AssoPay='$AssoPay',InjuryDegree='$InjuryDegree',InjRange='$InjRange',BearPay='$BearPay',PayMeth='$PayMeth',DisptRes='$DisptRes',AppPay='$AppPay',CondUnre='$CondUnre',WorkTime='$WorkTime',WorkPlace='$WorkPlace',JobRel='$JobRel',DiseRel='$DiseRel',
 							OutForPub='$OutForPub',OnOff='$OnOff',PrpOnOff='$PrpOnOff',WorkDeath='$WorkDeath',Rescue='$Rescue',Service='$Service',Crime='$Crime',Drink='$Drink',Suicide='$Suicide',InjIden='$InjIden',Valid='$Valid',InjDate='$InjDate',Year='$Year',Month='$Month',Day='$Day',AdmitInj='$AdmitInj',WillPay='$WillPay',AmountDispute='$AmountDispute',RangeDispute='$RangeDispute',SettlePrivate='$SettlePrivate',SickDispute='$SickDispute',
-							LaborArbi='$LaborArbi',RefuAsct='$RefuAsct',LaborDisp='$LaborDisp',Employ='$Employ',Qualify='$Qualify',EndLabor='$EndLabor',LaborContr='$LaborContr',HaveContr='$HaveContr',ValidContr='$ValidContr',ConfrmLevel='$ConfrmLevel',Level='$Level',Death='$Death',Slight='$Slight',Insurance='$Insurance',PersonalWage='$PersonalWage',SocialWage='$SocialWage',
-							HaveMedicalFee='$HaveMedicalFee',MedicalFee='$MedicalFee',BearMedicalFee='$BearMedicalFee',Identity='$Identity' where CaseID='$CaseID' and username='$username'";
+							LaborArbi='$LaborArbi',RefuAsct='$RefuAsct',LaborDisp='$LaborDisp',Employ='$Employ',Qualify='$Qualify',EndLabor='$EndLabor',LaborContr='$LaborContr',HaveContr='$HaveContr',ValidContr='$ValidContr',ConfrmLevel='$ConfrmLevel',Level='$Level',Death='$Death',Slight='$Slight',Insurance='$Insurance',SuffctIns='$SuffctIns',PersonalWage='$PersonalWage',SocialWage='$SocialWage',
+							HaveMedicalFee='$HaveMedicalFee',MedicalFee='$MedicalFee',BearMedicalFee='$BearMedicalFee',
+							LeftMedFee='$LeftMedFee',MaimAstDispute='$MaimAstDispute',AllowanceDispute='$AllowanceDispute',MedAstDispute='$MedAstDispute',
+							MaimOccuDispute='$MaimOccuDispute',SalaryDispute='$SalaryDispute',HealthFeeDispute='$HealthFeeDispute',OldWoundDispute='$OldWoundDispute',
+							DeathAstDispute='$DeathAstDispute',InsfctInsDispute='$InsfctInsDispute',
+							Identity='$Identity' where CaseID='$CaseID' and username='$username'";
 	
 	if(mysql_query($sql,$con)){
 		echo 1;//成功标志
