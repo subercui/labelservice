@@ -71,18 +71,19 @@
 	$OldWoundDispute=$_REQUEST['OldWoundDispute'];
 	$DeathAstDispute=$_REQUEST['DeathAstDispute'];
 	$InsfctInsDispute=$_REQUEST['InsfctInsDispute'];
+	$Age=$_REQUEST['Age'];
 	$Identity=$_REQUEST['Identity'];
 	$sql="insert into feature(username,CaseID,Problem,Anwser,GetPay,AssoPay,InjuryDegree,InjRange,BearPay,PayMeth,DisptRes,AppPay,CondUnre,WorkTime,WorkPlace,JobRel,DiseRel,
 							OutForPub,OnOff,PrpOnOff,WorkDeath,Rescue,Service,Crime,Drink,Suicide,InjIden,Valid,InjDate,Year,Month,Day,AdmitInj,WillPay,AmountDispute,RangeDispute,SettlePrivate,SickDispute,
 							LaborArbi,RefuAsct,LaborDisp,Employ,Qualify,EndLabor,LaborContr,HaveContr,ValidContr,ConfrmLevel,Level,Death,Slight,Insurance,SuffctIns,PersonalWage,SocialWage,
 							HaveMedicalFee,MedicalFee,BearMedicalFee,LeftMedFee,MaimAstDispute,AllowanceDispute,MedAstDispute,MaimOccuDispute,SalaryDispute,HealthFeeDispute,OldWoundDispute,
-							DeathAstDispute,InsfctInsDispute,Identity) 
+							DeathAstDispute,InsfctInsDispute,Age,Identity) 
 							values('$username','$CaseID','$Problem','$Anwser','$GetPay','$AssoPay','$InjuryDegree','$InjRange','$BearPay','$PayMeth','$DisptRes','$AppPay','$CondUnre','$WorkTime','$WorkPlace','$JobRel','$DiseRel',
 							'$OutForPub','$OnOff','$PrpOnOff','$WorkDeath','$Rescue','$Service','$Crime','$Drink','$Suicide','$InjIden','$Valid','$InjDate','$Year','$Month','$Day','$AdmitInj','$WillPay','$AmountDispute','$RangeDispute','$SettlePrivate','$SickDispute',
 							'$LaborArbi','$RefuAsct','$LaborDisp','$Employ','$Qualify','$EndLabor','$LaborContr','$HaveContr','$ValidContr','$ConfrmLevel','$Level','$Death','$Slight','$Insurance','$SuffctIns','$PersonalWage','$SocialWage',
 							'$HaveMedicalFee','$MedicalFee','$BearMedicalFee','$LeftMedFee','$MaimAstDispute','$AllowanceDispute',
 							'$MedAstDispute','$MaimOccuDispute','$SalaryDispute','$HealthFeeDispute','$OldWoundDispute',
-							'$DeathAstDispute','$InsfctInsDispute','$Identity')";
+							'$DeathAstDispute','$InsfctInsDispute','$Age','$Identity')";
 	
 	if(mysql_query($sql,$con)){
 		//2、获取下一个文件内容

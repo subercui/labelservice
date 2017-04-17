@@ -515,7 +515,7 @@
 	"SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr",
 	"ValidContr","ConfrmLevel","Level","Death","Slight","Insurance","SuffctIns","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee",
 	"BearMedicalFee","LeftMedFee","MaimAstDispute","AllowanceDispute","MedAstDispute","MaimOccuDispute","SalaryDispute",
-	"HealthFeeDispute","OldWoundDispute","DeathAstDispute","InsfctInsDispute","Identity");
+	"HealthFeeDispute","OldWoundDispute","DeathAstDispute","InsfctInsDispute","Age","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -692,7 +692,7 @@
 			  if(val!=-1){
 				  if(key=="InjDate" && val=="0000-00-00") continue;
 				  if(key=="Year" || key=="Month" || key=="Day") changeColor("RelDate");
-				  if(key=="InjDate" || key=="Year" || key=="Month" || key=="Day" || key=="Level" || key=="PersonalWage" || key=="SocialWage" || key=="MedicalFee" ){
+				  if(key=="InjDate" || key=="Year" || key=="Month" || key=="Day" || key=="Level" || key=="PersonalWage" || key=="SocialWage" || key=="MedicalFee" || key=="Age" ){
 						$("input[name='"+key+"']").val(val);
 				  }else{
 						$("input[name='"+key+"'][value="+val+"]").prop("checked","checked"); 
@@ -798,6 +798,7 @@
 		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
+		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -823,7 +824,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){		
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){		
 			data=JSON.parse(msg);
 			if(data[0]==1){//成功标志
 				if(data[1]==0){//无文档显示标志
@@ -1033,6 +1034,7 @@
 		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
+		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -1058,7 +1060,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){
 			if(msg=='0'){
 				alert("未更新成功，请重新更新");
 			}
@@ -1191,6 +1193,7 @@
 		OldWoundDispute=$("input[name='OldWoundDispute']:checked").val()==null?-1:$("input[name='OldWoundDispute']:checked").val();
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();	
+		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		
@@ -1217,7 +1220,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Identity:Identity},function(msg){
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){
 			if(msg==1){
 				if(FileBelong!=1 && FileBelong!=3){
 					$("#Lab").html(parseInt($("#Lab").text())+1);
