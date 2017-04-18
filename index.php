@@ -119,41 +119,41 @@
 				<ul>
 					<li>1.问题
 						<ul>
-							<li id="GetPay">1.1 是否询问算工伤/是否询问满足工伤赔偿条件</li>
+							<li id="GetPay">1.1 是否询问算工伤/询问是否满足工伤赔偿条件</li>
 									<label><input name="GetPay" type="radio" value="1" onclick="changeColor('GetPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="GetPay" type="radio" value="0" onclick="changeColor('GetPay')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<!-- <label><input name="GetPay" type="radio" value="0" onclick="changeColor('GetPay')"/>NO&nbsp;&nbsp;&nbsp;</label>  -->
 							<br>
 							<li id="AssoPay">1.2 是否询问赔偿金额</li>
 									<label><input name="AssoPay" type="radio" value="1" onclick="changeColor('AssoPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="AssoPay" type="radio" value="0" onclick="changeColor('AssoPay')"/>NO&nbsp;&nbsp;&nbsp;</label> 
+									<!-- <label><input name="AssoPay" type="radio" value="0" onclick="changeColor('AssoPay')"/>NO&nbsp;&nbsp;&nbsp;</label>  -->
 							<br>
 							<li id="InjuryDegree">1.3 是否询问工伤分级</li>
 									<label><input name="InjuryDegree" type="radio" value="1" onclick="changeColor('InjuryDegree')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="InjuryDegree" type="radio" value="0" onclick="changeColor('InjuryDegree')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="InjuryDegree" type="radio" value="0" onclick="changeColor('InjuryDegree')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="InjRange">1.4 是否询问工伤赔偿的覆盖范围</li>
 									<label><input name="InjRange" type="radio" value="1" onclick="changeColor('InjRange')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="InjRange" type="radio" value="0" onclick="changeColor('InjRange')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="InjRange" type="radio" value="0" onclick="changeColor('InjRange')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="BearPay">1.5 是否询问赔偿金承担方（如公司/社保）</li>
 									<label><input name="BearPay" type="radio" value="1" onclick="changeColor('BearPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="BearPay" type="radio" value="0" onclick="changeColor('BearPay')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="BearPay" type="radio" value="0" onclick="changeColor('BearPay')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="PayMeth">1.6 是否询问赔偿支付方式选择</li>
 									<label><input name="PayMeth" type="radio" value="1" onclick="changeColor('PayMeth')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="PayMeth" type="radio" value="0" onclick="changeColor('PayMeth')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="PayMeth" type="radio" value="0" onclick="changeColor('PayMeth')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="DisptRes">1.7 是否询问和雇主纠纷的解决方案</li>
 									<label><input name="DisptRes" type="radio" value="1" onclick="changeColor('DisptRes')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="AppPay">1.8 是否询问如何申请工伤赔偿的流程</li>
 									<label><input name="AppPay" type="radio" value="1" onclick="changeColor('AppPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="AppPay" type="radio" value="0" onclick="changeColor('AppPay')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="AppPay" type="radio" value="0" onclick="changeColor('AppPay')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 							<li id="CondUnre">1.9 其他工伤或非工伤领域的问题</li>
 									<label><input name="CondUnre" type="radio" value="1" onclick="changeColor('CondUnre')"/>Yes&nbsp;&nbsp;&nbsp; </label>
-									<label><input name="CondUnre" type="radio" value="0" onclick="changeColor('CondUnre')"/>NO&nbsp;&nbsp;&nbsp;</label>
+									<!-- <label><input name="CondUnre" type="radio" value="0" onclick="changeColor('CondUnre')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
 						</ul>
 					</li>
@@ -515,7 +515,7 @@
 	"SettlePrivate","SickDispute","LaborArbi","RefuAsct","LaborDisp","Employ","Qualify","EndLabor","LaborContr","HaveContr",
 	"ValidContr","ConfrmLevel","Level","Death","Slight","Insurance","SuffctIns","PersonalWage","SocialWage","HaveMedicalFee","MedicalFee",
 	"BearMedicalFee","LeftMedFee","MaimAstDispute","AllowanceDispute","MedAstDispute","MaimOccuDispute","SalaryDispute",
-	"HealthFeeDispute","OldWoundDispute","DeathAstDispute","InsfctInsDispute","Age","Identity");
+	"HealthFeeDispute","OldWoundDispute","DeathAstDispute","InsfctInsDispute","Age","Location","Identity");
 	
 	$(document).ready(function(){
 	  $.post("GetInitPro.php",{path_prefix:path_prefix},function(msg){
@@ -692,7 +692,7 @@
 			  if(val!=-1){
 				  if(key=="InjDate" && val=="0000-00-00") continue;
 				  if(key=="Year" || key=="Month" || key=="Day") changeColor("RelDate");
-				  if(key=="InjDate" || key=="Year" || key=="Month" || key=="Day" || key=="Level" || key=="PersonalWage" || key=="SocialWage" || key=="MedicalFee" || key=="Age" ){
+				  if(key=="InjDate" || key=="Year" || key=="Month" || key=="Day" || key=="Level" || key=="PersonalWage" || key=="SocialWage" || key=="MedicalFee" || key=="Age" || key=="Location" ){
 						$("input[name='"+key+"']").val(val);
 				  }else{
 						$("input[name='"+key+"'][value="+val+"]").prop("checked","checked"); 
@@ -799,6 +799,7 @@
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
 		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
+		Location=$("input[name='Location']").val()==0?-1:$("input[name='Location']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -824,7 +825,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){		
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Location:Location,Identity:Identity},function(msg){		
 			data=JSON.parse(msg);
 			if(data[0]==1){//成功标志
 				if(data[1]==0){//无文档显示标志
@@ -1035,6 +1036,7 @@
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();
 		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
+		Location=$("input[name='Location']").val()==0?-1:$("input[name='Location']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		var moneyReg=new RegExp("^(([0-9]|([1-9][0-9]{0,9}))((\.[0-9]{1,2})?))$");
@@ -1060,7 +1062,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Location:Location,Identity:Identity},function(msg){
 			if(msg=='0'){
 				alert("未更新成功，请重新更新");
 			}
@@ -1194,6 +1196,7 @@
 		DeathAstDispute=$("input[name='DeathAstDispute']:checked").val()==null?-1:$("input[name='DeathAstDispute']:checked").val();
 		InsfctInsDispute=$("input[name='InsfctInsDispute']:checked").val()==null?-1:$("input[name='InsfctInsDispute']:checked").val();	
 		Age=$("input[name='Age']").val()==0?-1:$("input[name='Age']").val();
+		Location=$("input[name='Location']").val()==0?-1:$("input[name='Location']").val();
 		Identity=$("input[name='Identity']:checked").val()==null?-1:$("input[name='Identity']:checked").val();
 		
 		
@@ -1220,7 +1223,7 @@
 							HaveMedicalFee:HaveMedicalFee,MedicalFee:MedicalFee,BearMedicalFee:BearMedicalFee,BearMedicalFee:BearMedicalFee,
 							LeftMedFee:LeftMedFee,MaimAstDispute:MaimAstDispute,AllowanceDispute:AllowanceDispute,MedAstDispute:MedAstDispute,
 							MaimOccuDispute:MaimOccuDispute,SalaryDispute:SalaryDispute,HealthFeeDispute:HealthFeeDispute,
-							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Identity:Identity},function(msg){
+							OldWoundDispute:OldWoundDispute,DeathAstDispute:DeathAstDispute,InsfctInsDispute:InsfctInsDispute,Age:Age,Location:Location,Identity:Identity},function(msg){
 			if(msg==1){
 				if(FileBelong!=1 && FileBelong!=3){
 					$("#Lab").html(parseInt($("#Lab").text())+1);

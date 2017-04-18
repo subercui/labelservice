@@ -70,6 +70,7 @@
 	$DeathAstDispute=$_REQUEST['DeathAstDispute'];
 	$InsfctInsDispute=$_REQUEST['InsfctInsDispute'];
 	$Age=$_REQUEST['Age'];
+	$Location=$_REQUEST['Location'];
 	$Identity=$_REQUEST['Identity'];
 	$sql="update feature set CaseID='$CaseID',Problem='$Problem',Anwser='$Anwser',GetPay='$GetPay',AssoPay='$AssoPay',InjuryDegree='$InjuryDegree',InjRange='$InjRange',BearPay='$BearPay',PayMeth='$PayMeth',DisptRes='$DisptRes',AppPay='$AppPay',CondUnre='$CondUnre',WorkTime='$WorkTime',WorkPlace='$WorkPlace',JobRel='$JobRel',DiseRel='$DiseRel',
 							OutForPub='$OutForPub',OnOff='$OnOff',PrpOnOff='$PrpOnOff',WorkDeath='$WorkDeath',Rescue='$Rescue',Service='$Service',Crime='$Crime',Drink='$Drink',Suicide='$Suicide',InjIden='$InjIden',Valid='$Valid',InjDate='$InjDate',Year='$Year',Month='$Month',Day='$Day',AdmitInj='$AdmitInj',WillPay='$WillPay',AmountDispute='$AmountDispute',RangeDispute='$RangeDispute',SettlePrivate='$SettlePrivate',SickDispute='$SickDispute',
@@ -77,7 +78,7 @@
 							HaveMedicalFee='$HaveMedicalFee',MedicalFee='$MedicalFee',BearMedicalFee='$BearMedicalFee',
 							LeftMedFee='$LeftMedFee',MaimAstDispute='$MaimAstDispute',AllowanceDispute='$AllowanceDispute',MedAstDispute='$MedAstDispute',
 							MaimOccuDispute='$MaimOccuDispute',SalaryDispute='$SalaryDispute',HealthFeeDispute='$HealthFeeDispute',OldWoundDispute='$OldWoundDispute',
-							DeathAstDispute='$DeathAstDispute',InsfctInsDispute='$InsfctInsDispute',Age='$Age',
+							DeathAstDispute='$DeathAstDispute',InsfctInsDispute='$InsfctInsDispute',Age='$Age',Location='$Location',
 							Identity='$Identity' where CaseID='$CaseID' and username='$username'";
 	
 	if(mysql_query($sql,$con)){
