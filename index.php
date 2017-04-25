@@ -131,7 +131,7 @@
 									<label><input name="InjuryDegree" type="radio" value="1" onclick="changeColor('InjuryDegree')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="InjuryDegree" type="radio" value="0" onclick="changeColor('InjuryDegree')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
-							<li id="InjRange">1.4 是否询问工伤赔偿的覆盖范围</li>
+							<li id="InjRange">1.4 是否询问工伤赔偿的覆盖范围（如是否包含误工费）</li>
 									<label><input name="InjRange" type="radio" value="1" onclick="changeColor('InjRange')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="InjRange" type="radio" value="0" onclick="changeColor('InjRange')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
@@ -139,7 +139,7 @@
 									<label><input name="BearPay" type="radio" value="1" onclick="changeColor('BearPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="BearPay" type="radio" value="0" onclick="changeColor('BearPay')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
-							<li id="PayMeth">1.6 是否询问赔偿支付方式选择</li>
+							<li id="PayMeth">1.6 是否询问赔偿支付方式选择（如一次性/按月）</li>
 									<label><input name="PayMeth" type="radio" value="1" onclick="changeColor('PayMeth')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="PayMeth" type="radio" value="0" onclick="changeColor('PayMeth')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
@@ -147,7 +147,7 @@
 									<label><input name="DisptRes" type="radio" value="1" onclick="changeColor('DisptRes')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
-							<li id="AppPay">1.8 是否询问如何申请工伤赔偿的流程</li>
+							<li id="AppPay">1.8 是否询问如何申请工伤赔偿</li>
 									<label><input name="AppPay" type="radio" value="1" onclick="changeColor('AppPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="AppPay" type="radio" value="0" onclick="changeColor('AppPay')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
@@ -436,9 +436,9 @@
 									<br>
 								</ul>
 							</li>
-							<li>2.9 赔偿金额或支付方纠纷
+							<li>2.9 是否特别关心某项赔偿或针对某项产生纠纷
 								<ul>
-									<li id="MaimAstDispute">.2.9.1 是否一次性伤残补助金纠纷</li>
+									<li id="MaimAstDispute">2.9.1 是否一次性伤残补助金纠纷</li>
 									<label><input name="MaimAstDispute" type="radio" value="1" onclick="changeColor('MaimAstDispute')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<label><input name="MaimAstDispute" type="radio" value="0" onclick="changeColor('MaimAstDispute')"/>NO&nbsp;&nbsp;&nbsp;</label> 
 									<br>
@@ -884,24 +884,12 @@
 			filename=data[2];
 			$("#caseid").html(filename.substr(0,filename.length-4));
 			
-			//给右侧标注赋值
-			showResult(data[4]);
-			/*count=1;
-			for(var key in data[4]){
-				if(count>data[3]/2+4){
-					if(data[4][key]!=-1){
-						if(key=="InjDate" && data[4][key]=="0000-00-00") continue;
-						if(key=="Year" || key=="Month" || key=="Day") changeColor("RelDate");
-						if(key=="InjDate" || key=="Year" || key=="Month" || key=="Day" || key=="Level" || key=="PersonalWage" || key=="SocialWage" || key=="MedicalFee" ){
-							$("input[name='"+key+"']").val(data[4][key]);
-						}else{
-							$("input[name='"+key+"'][value="+data[4][key]+"]").prop("checked","checked"); 
-						}	
-						changeColor(key);
-					}
-				}
-				count++;
-			}*/		
+			if(flag=='0'){
+			   //给右侧标注赋值
+			   showResult(data[4]);
+			}
+			
+
 		});
 		curPage--;
 		if(curPage==1){
@@ -935,8 +923,10 @@
 			filename=data[2];
 			$("#caseid").html(filename.substr(0,filename.length-4));
 			
-			//给右侧标注赋值
-			showResult(data[4]);
+			if(flag=='0'){
+			   //给右侧标注赋值
+			   showResult(data[4]);
+			}
 			/*count=1;
 			for(var key in data[4]){
 				if(count>data[3]/2+4){

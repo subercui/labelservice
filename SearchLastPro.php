@@ -28,6 +28,7 @@
 	include "db_connect.php";
 	$caseid=substr($result[2],0,-4);
 	$sql="select * from feature where CaseID='$caseid' and username='$username'";
+
 	$res=mysql_query($sql,$con);
     $row=mysql_fetch_array($res);
 	$result[]=count($row);
