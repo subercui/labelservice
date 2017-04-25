@@ -1071,7 +1071,7 @@
 		$("input[type='text']").val("");
 
 		//先搜文件，锁定位置
-		$.post("searchHandle.php",{path_prefix:path_prefix,searchFile:searchFile},function(msg){
+		$.post("searchHandle.php",{username:username,path_prefix:path_prefix,searchFile:searchFile},function(msg){
 			data=JSON.parse(msg);
 			if(data[0]==1){
 				$("#problem").html(data[1]);

@@ -17,6 +17,7 @@
 		$file3=$path_prefix."/ToLabel/".$searchFile.".txt";
 		$file3=iconv('UTF-8','GB2312',$file3);
 	
+		$username=$_REQUEST['username'];
 		$result=array();
 		if(file_exists($file1)){//存在于未标记里
 			$result[]=1;
@@ -42,7 +43,7 @@
 			
 			//从数据库中读取数据
 			include "db_connect.php";
-			$sql="select * from feature where CaseID='$searchFile'";
+			$sql="select * from feature where CaseID='$searchFile' and username='$username'";
 			$res=mysql_query($sql,$con);
 			$row=mysql_fetch_array($res);
 			$result[]=count($row);
