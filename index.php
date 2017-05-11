@@ -147,7 +147,7 @@
 									<label><input name="DisptRes" type="radio" value="1" onclick="changeColor('DisptRes')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="DisptRes" type="radio" value="0" onclick="changeColor('DisptRes')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
-							<li id="AppPay">1.8 是否询问如何申请工伤赔偿</li>
+							<li id="AppPay">1.8 是否询问如何申请工伤赔偿/或询问流程</li>
 									<label><input name="AppPay" type="radio" value="1" onclick="changeColor('AppPay')"/>Yes&nbsp;&nbsp;&nbsp; </label>
 									<!-- <label><input name="AppPay" type="radio" value="0" onclick="changeColor('AppPay')"/>NO&nbsp;&nbsp;&nbsp;</label> -->
 							<br>
